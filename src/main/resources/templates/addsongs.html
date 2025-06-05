@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Songs - Tune Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #66ff66;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background-color: #737373;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #000080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #003366;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form action="/addsongs" method="post">
+        <label for="name">Song Name:</label>
+        <input type="text" id="name" name="name" required/>
+
+        <label for="artist">Song Artist:</label>
+        <input type="text" id="artist" name="artist" required/>
+
+        <label for="genre">Song Genre:</label>
+        <input type="text" id="genre" name="genre" required/>
+
+        <label for="link">Song Link:</label>
+        <input type="text" id="link" name="link" required/>
+
+        <input type="submit" value="ADD SONGS"/>
+    </form>
+
+</body>
+</html>

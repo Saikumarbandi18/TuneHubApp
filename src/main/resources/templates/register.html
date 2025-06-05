@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Tune Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */;
+            background: url('/images/registerimages.jpeg') no-repeat center center fixed;
+			background-size: cover; /* Ensures the image covers the entire page */
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        input[type="radio"] {
+            margin: 0 5px 0 15px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #000080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #003366;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/register" method="post">
+        <div class="form-group">
+            <label for="username" style="color: #ffffff;">User Name:</label>
+            <input type="text" id="username" name="username" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="email" style="color: #ffffff;">Email ID:</label>
+            <input type="email" id="email" name="email" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="password" style="color: #ffffff;">Password:</label>
+            <input type="password" id="password" name="password" required/>
+        </div>
+
+        <div class="form-group">
+            <label style="color: #ffffff;">Gender:</label>
+            <label style="color: #ffffff;"><input type="radio" name="gender" value="male"> Male</label>
+            <label style="color: #ffffff;"><input type="radio" name="gender" value="female"> Female</label>
+            <label style="color: #ffffff;"><input type="radio" name="gender" value="other"> Other</label>
+        </div>
+
+        <div class="form-group">
+            <label style="color: #ffffff;">Role:</label>
+            <label style="color: #ffffff;"><input type="radio" name="role" value="admin"> Admin</label>
+            <label style="color: #ffffff;"><input type="radio" name="role" value="customer"> Customer</label>
+        </div>
+
+        <div class="form-group">
+            <label for="address" style="color: #ffffff;">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+        </div>
+
+        <input type="submit" value="REGISTER"/>
+    </form>
+
+</body>
+</html>

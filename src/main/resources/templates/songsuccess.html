@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Success</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .modal {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      text-align: center;
+      position: relative;
+    }
+
+    .modal h2 {
+      color: #28a745;
+      margin-bottom: 20px;
+    }
+
+    .modal button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .modal button:hover {
+      background-color: #0056b3;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="modal fade-in">
+  <h2>✅ Song is added successfully!</h2>
+  <button onclick="goBack()">⬅ Back</button>
+</div>
+
+<script>
+  function goBack() {
+    window.history.back(); // or use window.location.href = 'your_target_page.html';
+  }
+
+  // Optional: Auto-close after 3 seconds (you can remove this block if not needed)
+  // setTimeout(() => {
+  //   document.querySelector('.modal').style.display = 'none';
+  // }, 3000);
+</script>
+
+</body>
+</html>
